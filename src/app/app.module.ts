@@ -7,6 +7,8 @@ import { HeaderComponent } from './Layout/header/header.component';
 import { FooterComponent } from './Layout/footer/footer.component';
 import { HomeComponent } from './Layout/home/home.component';
 import { NotFoundComponent } from './Layout/not-found/not-found.component';
+import { ListEventsComponent } from './Layout/list-events/list-events.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { NotFoundComponent } from './Layout/not-found/not-found.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ListEventsComponent
   ],
   imports: [
     BrowserModule,
