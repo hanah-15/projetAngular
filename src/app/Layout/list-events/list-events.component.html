@@ -3,11 +3,12 @@
 
     <!-- Recherche -->
     <input type="text" class="form-control mb-4"
-           placeholder="Rechercher un événement">
+           placeholder="Rechercher un événement"
+           [(ngModel)]="searchTerm">
 
     <div class="row g-3" >
         <div class="col-md-4" *ngFor="let event of Elist">
-            <div class="card h-100 shadow-sm">
+            <div class="card h-100 shadow-sm" *ngIf="!searchTerm || event.titre.toLowerCase().includes(searchTerm.toLowerCase()) || event.lieu.toLowerCase().includes(searchTerm.toLowerCase());else notfound"> 
                 <img [src]="event.imageUrl" alt="Event Image"
                      class="card-img-top img-fluid"
                      style="height: 200px; object-fit: cover;">
@@ -20,12 +21,22 @@
                     <p>{{ event.date | date:'shortDate' }}</p>
 
                     <!-- Bouton Like -->
-                    <button class="btn btn-sm btn-primary" >
+                    <button class="btn btn-sm btn-primary" (click)="increment_likes(event)" [disabled]=" campare(event) ">
                         👍 Like
                     </button>
-                    <span class="ms-2">put your data</span>
+                    <span class="ms-2">{{ event.nbLikes }}</span>
                 </div>
+
+            </div>
+            <div>
+                
             </div>
         </div>
+       
     </div>
+     
 </div>
+<ng-template #notfound>
+                    <p class="text-danger">No results found</p>
+    </ng-template>
+
