@@ -9,6 +9,7 @@ import { HomeComponent } from './Layout/home/home.component';
 import { NotFoundComponent } from './Layout/not-found/not-found.component';
 import { ListEventsComponent } from './Layout/list-events/list-events.component';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
