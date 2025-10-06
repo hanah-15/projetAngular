@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
 import { Event } from '../models/event';
 import { DatePipe } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
+import { CurrencyPipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe,UpperCasePipe,CurrencyPipe,DecimalPipe],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrl: './card.component.css',
+  
 })
+
 export class CardComponent {
  Eventlist:Event[]=[
     {id:1,titre:"Concert de Rock",description:"Un concert de rock avec des groupes locaux.",date:new Date("2026-11-15"),lieu:"Salle des Fêtes",prix:30,organisateurId:1,imageUrl:"assets/images/concert.jpg",nbPlaces:100,nbLikes:45},
