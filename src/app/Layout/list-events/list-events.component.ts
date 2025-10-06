@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Event } from '../../models/event';
+import { SharedModule } from '../../shared/shared.module';
 @Component({
   selector: 'app-list-events',
   templateUrl: './list-events.component.html',

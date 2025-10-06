@@ -10,6 +10,7 @@ import { NotFoundComponent } from './Layout/not-found/not-found.component';
 import { ListEventsComponent } from './Layout/list-events/list-events.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CardComponent } from './card/card.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    SharedModule,
     CardComponent
   ],
   providers: [],

@@ -7,8 +7,7 @@
            [(ngModel)]="searchTerm">
 
     <div class="row g-3" >
-        <div class="col-md-4" *ngFor="let event of Eventlist">
-            <!-- <div class="card h-100 shadow-sm" *ngIf="!searchTerm || event.titre.toLowerCase().includes(searchTerm.toLowerCase()) || event.lieu.toLowerCase().includes(searchTerm.toLowerCase());else notfound"> 
+ <div class="col-md-4" *ngFor="let event of Eventlist | contains:searchTerm">            <!-- <div class="card h-100 shadow-sm" *ngIf="!searchTerm || event.titre.toLowerCase().includes(searchTerm.toLowerCase()) || event.lieu.toLowerCase().includes(searchTerm.toLowerCase());else notfound"> 
                 <img [src]="event.imageUrl" alt="Event Image"
                      class="card-img-top img-fluid"
                      style="height: 200px; object-fit: cover;">

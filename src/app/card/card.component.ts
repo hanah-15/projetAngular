@@ -4,11 +4,12 @@ import { DatePipe } from '@angular/common';
 import { UpperCasePipe } from '@angular/common';
 import { CurrencyPipe } from '@angular/common';
 import { DecimalPipe } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [DatePipe,UpperCasePipe,CurrencyPipe,DecimalPipe],
+  imports: [DatePipe,UpperCasePipe,CurrencyPipe,DecimalPipe,SharedModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
   

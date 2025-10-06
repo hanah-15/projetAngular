@@ -1,9 +1,21 @@
+
+<!--<nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom shadow-sm"
+     [ngClass]="{
+         'admin-background': isAdmin,
+         'user-background': !isAdmin
+     }">
+-->
+
+
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark border-bottom shadow-sm"
 [ngClass]="{
-    'admin-admin-backgroud': isAdmin,
-    'user-backgroud': !isAdmin
-}"
->
+    'navbar navbar-expand-lg navbar-dark bg-dark': isAdmin,
+    'navbar navbar-expand-lg navbar-light bg-light': !isAdmin
+}" class="border-bottom shadow-sm">
+
+
+
+
 
     <div class="container">
         <!-- Logo / Nom de l'application -->
